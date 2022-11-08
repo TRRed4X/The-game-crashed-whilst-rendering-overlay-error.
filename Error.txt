@@ -1,0 +1,379 @@
+---- Minecraft Crash Report ----
+// I let you down. Sorry :(
+
+Time: 2022-11-08 13:43:14
+Description: Rendering overlay
+
+java.lang.NoSuchMethodError: 'void net.minecraft.client.renderer.block.model.BakedQuad.<init>(int[], int, net.minecraft.core.Direction, net.minecraft.client.renderer.texture.TextureAtlasSprite, boolean, boolean)'
+	at net.minecraftforge.client.model.pipeline.QuadBakingVertexConsumer.m_5752_(QuadBakingVertexConsumer.java:131) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.obj.ObjModel.makeQuad(ObjModel.java:461) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.obj.ObjModel$ModelMesh.addQuads(ObjModel.java:657) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.obj.ObjModel$ModelObject.addQuads(ObjModel.java:556) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.obj.ObjModel$ModelGroup.addQuads(ObjModel.java:595) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.obj.ObjModel.lambda$addQuads$2(ObjModel.java:355) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[?:?] {}
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[?:?] {}
+	at java.util.HashMap$ValueSpliterator.forEachRemaining(HashMap.java:1779) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?] {}
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[?:?] {}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?] {}
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?] {}
+	at net.minecraftforge.client.model.obj.ObjModel.addQuads(ObjModel.java:355) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.geometry.SimpleUnbakedGeometry.bake(SimpleUnbakedGeometry.java:41) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.geometry.UnbakedGeometryHelper.bake(UnbakedGeometryHelper.java:99) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraft.client.renderer.block.model.BlockModel.m_111449_(BlockModel.java:203) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:ae2.mixins.json:unlitquad.BlockModelMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.block.model.BlockModel.m_7611_(BlockModel.java:199) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:ae2.mixins.json:unlitquad.BlockModelMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.resources.model.ModelBakery.bake(ModelBakery.java:662) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default,pl:mixin:A}
+	at net.minecraft.client.renderer.block.model.MultiVariant.m_7611_(MultiVariant.java:73) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.resources.model.ModelBakery.bake(ModelBakery.java:662) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default,pl:mixin:A}
+	at net.minecraft.client.resources.model.ModelBakery.m_119349_(ModelBakery.java:629) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default,pl:mixin:A}
+	at net.minecraft.client.resources.model.ModelBakery.lambda$uploadTextures$12(ModelBakery.java:288) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default,pl:mixin:A}
+	at java.util.HashMap$KeySet.forEach(HashMap.java:1008) ~[?:?] {}
+	at net.minecraft.client.resources.model.ModelBakery.m_119298_(ModelBakery.java:283) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default,pl:mixin:A}
+	at net.minecraft.client.resources.model.ModelManager.m_5787_(ModelManager.java:70) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.resources.model.ModelManager.m_5787_(ModelManager.java:20) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.packs.resources.SimplePreparableReloadListener.m_10789_(SimplePreparableReloadListener.java:13) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading,re:mixin}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_143940_(SimpleReloadInstance.java:69) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:118) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:computing_frames,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_10834_(SimpleReloadInstance.java:68) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_143940_(SimpleReloadInstance.java:69) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:118) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:computing_frames,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_10834_(SimpleReloadInstance.java:68) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_143940_(SimpleReloadInstance.java:69) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:118) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:computing_frames,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_10834_(SimpleReloadInstance.java:68) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_143940_(SimpleReloadInstance.java:69) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:118) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:computing_frames,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_10834_(SimpleReloadInstance.java:68) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_143940_(SimpleReloadInstance.java:69) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:118) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:computing_frames,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_10834_(SimpleReloadInstance.java:68) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_143940_(SimpleReloadInstance.java:69) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:118) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:computing_frames,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_10834_(SimpleReloadInstance.java:68) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at com.mojang.blaze3d.systems.RenderSystem.m_69884_(RenderSystem.java:212) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,xf:OptiFine:default,re:classloading,xf:OptiFine:default,pl:mixin:APP:flywheel.mixins.json:RenderTexturesMixin,pl:mixin:A}
+	at com.mojang.blaze3d.systems.RenderSystem.m_69495_(RenderSystem.java:199) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,xf:OptiFine:default,re:classloading,xf:OptiFine:default,pl:mixin:APP:flywheel.mixins.json:RenderTexturesMixin,pl:mixin:A}
+	at com.mojang.blaze3d.platform.Window.m_85435_(Window.java:453) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading,xf:OptiFine:default,re:mixin,xf:OptiFine:default}
+	at net.minecraft.client.Minecraft.m_91383_(Minecraft.java:1143) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:cgm.mixins.json:client.MinecraftMixin,pl:mixin:APP:ae2.mixins.json:PickColorMixin,pl:mixin:APP:immersiveengineering.mixins.json:accessors.client.MinecraftAccess,pl:mixin:APP:flywheel.mixins.json:PausedPartialTickAccessor,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:byg_forge.mixins.json:client.MixinMinecraft,pl:mixin:APP:create.mixins.json:WindowResizeMixin,pl:mixin:APP:securitycraft.mixins.json:camera.MinecraftMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:700) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:cgm.mixins.json:client.MinecraftMixin,pl:mixin:APP:ae2.mixins.json:PickColorMixin,pl:mixin:APP:immersiveengineering.mixins.json:accessors.client.MinecraftAccess,pl:mixin:APP:flywheel.mixins.json:PausedPartialTickAccessor,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:byg_forge.mixins.json:client.MixinMinecraft,pl:mixin:APP:create.mixins.json:WindowResizeMixin,pl:mixin:APP:securitycraft.mixins.json:camera.MinecraftMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.m_239872_(Main.java:212) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading,re:mixin,pl:runtimedistcleaner:A,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:51) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading,re:mixin,pl:runtimedistcleaner:A,pl:mixin:A,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$launchService$0(CommonClientLaunchHandler.java:27) ~[fmlloader-1.19.2-43.1.47.jar%2395!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) [bootstraplauncher-1.1.2.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.minecraftforge.client.model.pipeline.QuadBakingVertexConsumer.m_5752_(QuadBakingVertexConsumer.java:131) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.obj.ObjModel.makeQuad(ObjModel.java:461) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.obj.ObjModel$ModelMesh.addQuads(ObjModel.java:657) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.obj.ObjModel$ModelObject.addQuads(ObjModel.java:556) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.obj.ObjModel$ModelGroup.addQuads(ObjModel.java:595) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.obj.ObjModel.lambda$addQuads$2(ObjModel.java:355) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[?:?] {}
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[?:?] {}
+	at java.util.HashMap$ValueSpliterator.forEachRemaining(HashMap.java:1779) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?] {}
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[?:?] {}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?] {}
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?] {}
+	at net.minecraftforge.client.model.obj.ObjModel.addQuads(ObjModel.java:355) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.geometry.SimpleUnbakedGeometry.bake(SimpleUnbakedGeometry.java:41) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraftforge.client.model.geometry.UnbakedGeometryHelper.bake(UnbakedGeometryHelper.java:99) ~[forge-1.19.2-43.1.47-universal.jar%23199!/:?] {re:classloading}
+	at net.minecraft.client.renderer.block.model.BlockModel.m_111449_(BlockModel.java:203) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:ae2.mixins.json:unlitquad.BlockModelMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.block.model.BlockModel.m_7611_(BlockModel.java:199) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:ae2.mixins.json:unlitquad.BlockModelMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.resources.model.ModelBakery.bake(ModelBakery.java:662) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default,pl:mixin:A}
+	at net.minecraft.client.renderer.block.model.MultiVariant.m_7611_(MultiVariant.java:73) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.resources.model.ModelBakery.bake(ModelBakery.java:662) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default,pl:mixin:A}
+	at net.minecraft.client.resources.model.ModelBakery.m_119349_(ModelBakery.java:629) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default,pl:mixin:A}
+	at net.minecraft.client.resources.model.ModelBakery.lambda$uploadTextures$12(ModelBakery.java:288) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default,pl:mixin:A}
+	at java.util.HashMap$KeySet.forEach(HashMap.java:1008) ~[?:?] {}
+	at net.minecraft.client.resources.model.ModelBakery.m_119298_(ModelBakery.java:283) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default,pl:mixin:A}
+	at net.minecraft.client.resources.model.ModelManager.m_5787_(ModelManager.java:70) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.resources.model.ModelManager.m_5787_(ModelManager.java:20) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.packs.resources.SimplePreparableReloadListener.m_10789_(SimplePreparableReloadListener.java:13) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading,re:mixin}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_143940_(SimpleReloadInstance.java:69) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:118) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:computing_frames,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_10834_(SimpleReloadInstance.java:68) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_143940_(SimpleReloadInstance.java:69) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:118) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:computing_frames,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_10834_(SimpleReloadInstance.java:68) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_143940_(SimpleReloadInstance.java:69) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:118) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:computing_frames,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_10834_(SimpleReloadInstance.java:68) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_143940_(SimpleReloadInstance.java:69) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:118) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:computing_frames,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_10834_(SimpleReloadInstance.java:68) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_143940_(SimpleReloadInstance.java:69) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:118) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:computing_frames,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_10834_(SimpleReloadInstance.java:68) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_143940_(SimpleReloadInstance.java:69) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at net.minecraft.util.thread.BlockableEventLoop.execute(BlockableEventLoop.java:118) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:computing_frames,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default}
+	at net.minecraft.server.packs.resources.SimpleReloadInstance.m_10834_(SimpleReloadInstance.java:68) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$UniCompletion.claim(CompletableFuture.java:572) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.postFire(CompletableFuture.java:614) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:726) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at com.mojang.blaze3d.systems.RenderSystem.m_69884_(RenderSystem.java:212) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,xf:OptiFine:default,re:classloading,xf:OptiFine:default,pl:mixin:APP:flywheel.mixins.json:RenderTexturesMixin,pl:mixin:A}
+	at com.mojang.blaze3d.systems.RenderSystem.m_69495_(RenderSystem.java:199) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,xf:OptiFine:default,re:classloading,xf:OptiFine:default,pl:mixin:APP:flywheel.mixins.json:RenderTexturesMixin,pl:mixin:A}
+-- Overlay render details --
+Details:
+	Overlay name: net.minecraft.client.gui.screens.LoadingOverlay
+Stacktrace:
+	at net.minecraft.client.renderer.GameRenderer.m_109093_(GameRenderer.java:1295) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,xf:OptiFine:default,re:classloading,pl:accesstransformer:B,xf:OptiFine:default,pl:mixin:APP:cgm.mixins.json:client.GameRendererMixin,pl:mixin:APP:create.mixins.json:GameRendererMixin,pl:mixin:APP:create.mixins.json:accessor.GameRendererAccessor,pl:mixin:APP:securitycraft.mixins.json:camera.GameRendererMixin,pl:mixin:A}
+	at net.minecraft.client.Minecraft.m_91383_(Minecraft.java:1115) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:cgm.mixins.json:client.MinecraftMixin,pl:mixin:APP:ae2.mixins.json:PickColorMixin,pl:mixin:APP:immersiveengineering.mixins.json:accessors.client.MinecraftAccess,pl:mixin:APP:flywheel.mixins.json:PausedPartialTickAccessor,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:byg_forge.mixins.json:client.MixinMinecraft,pl:mixin:APP:create.mixins.json:WindowResizeMixin,pl:mixin:APP:securitycraft.mixins.json:camera.MinecraftMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.m_91374_(Minecraft.java:700) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:cgm.mixins.json:client.MinecraftMixin,pl:mixin:APP:ae2.mixins.json:PickColorMixin,pl:mixin:APP:immersiveengineering.mixins.json:accessors.client.MinecraftAccess,pl:mixin:APP:flywheel.mixins.json:PausedPartialTickAccessor,pl:mixin:APP:architectury.mixins.json:MixinMinecraft,pl:mixin:APP:byg_forge.mixins.json:client.MixinMinecraft,pl:mixin:APP:create.mixins.json:WindowResizeMixin,pl:mixin:APP:securitycraft.mixins.json:camera.MinecraftMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.m_239872_(Main.java:212) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading,re:mixin,pl:runtimedistcleaner:A,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:51) ~[client-1.19.2-20220805.130853-srg.jar%23194!/:?] {re:classloading,re:mixin,pl:runtimedistcleaner:A,pl:mixin:A,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.CommonClientLaunchHandler.lambda$launchService$0(CommonClientLaunchHandler.java:27) ~[fmlloader-1.19.2-43.1.47.jar%2395!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-10.0.8.jar%2382!/:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) [bootstraplauncher-1.1.2.jar:?] {}
+
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: No
+	Packs: Default, Mod Resources
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.3, Microsoft
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Microsoft
+	Memory: 199744664 bytes (190 MiB) / 1606418432 bytes (1532 MiB) up to 4194304000 bytes (4000 MiB)
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 4800HS with Radeon Graphics         
+	Identifier: AuthenticAMD Family 23 Model 96 Stepping 1
+	Microarchitecture: unknown
+	Frequency (GHz): 2.89
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: NVIDIA GeForce GTX 1650
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x1f9d
+	Graphics card #0 versionInfo: DriverVersion=30.0.15.1278
+	Graphics card #1 name: AMD Radeon(TM) Graphics
+	Graphics card #1 vendor: Advanced Micro Devices, Inc. (0x1002)
+	Graphics card #1 VRAM (MB): 512.00
+	Graphics card #1 deviceId: 0x1636
+	Graphics card #1 versionInfo: DriverVersion=30.0.13002.1001
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 3.20
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 30640.73
+	Virtual memory used (MB): 17685.38
+	Swap memory total (MB): 14848.00
+	Swap memory used (MB): 285.34
+	JVM Flags: 4 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx4000m -Xms256m
+	Launched Version: forge-43.1.47
+	Backend library: LWJGL version 3.3.1 build 7
+	Backend API: AMD Radeon(TM) Graphics GL version 3.2.14761 Core Profile Forward-Compatible Context 21.30.02.01 30.0.13002.1001, ATI Technologies Inc.
+	Window size: 1920x1080
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 16x AMD Ryzen 7 4800HS with Radeon Graphics 
+	OptiFine Version: OptiFine_1.19.2_HD_U_I1_pre2
+	OptiFine Build: 20220919-180220
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 3.2.14761 Core Profile Forward-Compatible Context 21.30.02.01 30.0.13002.1001
+	OpenGlRenderer: AMD Radeon(TM) Graphics
+	OpenGlVendor: ATI Technologies Inc.
+	CpuCount: 16
+	ModLauncher: 10.0.8+10.0.8+main.0ef7e830
+	ModLauncher launch target: forgeclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.3.jar eventbus PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.47.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.47.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.47.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.47.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.47.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.8.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.8.jar OptiFine TRANSFORMATIONSERVICE 
+		modlauncher-10.0.8.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		create_misc_and_things_1.19.2_1.1B.jar            |create: things and misc       |create_things_and_misc        |1.0.0               |ERROR     |Manifest: NOSIGNATURE
+		Cucumber-1.19.2-6.0.3.jar                         |Cucumber Library              |cucumber                      |6.0.3               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		jei-1.19.2-forge-11.4.0.285.jar                   |Just Enough Items             |jei                           |11.4.0.285          |ENQUEUE_IM|Manifest: NOSIGNATURE
+		appliedenergistics2-forge-12.8.4.jar              |Applied Energistics 2         |ae2                           |12.8.4              |ENQUEUE_IM|Manifest: NOSIGNATURE
+		IronJetpacks-1.19.2-6.0.1.jar                     |Iron Jetpacks                 |ironjetpacks                  |6.0.1               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		hats-and-cosmetics-1.4-1.19.2.jar                 |Hats and Cosmetics            |hat                           |1.4                 |ENQUEUE_IM|Manifest: NOSIGNATURE
+		goldenhopper-1.2.8-1.19.jar                       |Golden Hopper                 |goldenhopper                  |1.2.8               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		comforts-forge-6.0.2+1.19.2.jar                   |Comforts                      |comforts                      |6.0.2+1.19.2        |ENQUEUE_IM|Manifest: NOSIGNATURE
+		configured-2.0.1-1.19.2.jar                       |Configured                    |configured                    |2.0.1               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		moreminecarts-1.5.3.jar                           |More Minecarts                |moreminecarts                 |1.5.3               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		More Babies-forge-1.19.1-1.0.0.jar                |More Babies                   |more_babies                   |1.0.0               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		create-confectionery1.19.2_v1.0.8.jar             |Create Confectionery          |create_confectionery          |1.0.8               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		catalogue-1.6.3-1.19.jar                          |Catalogue                     |catalogue                     |1.6.3               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		immersive_armors-1.4.2.jar                        |Immersive Armors              |immersive_armors              |1.4.2               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		[Universal]Immersive_Structures_v2-0-5.jar        |Immersive Structure           |imst                          |2.0.5               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		cloth-config-8.2.88-forge.jar                     |Cloth Config v8 API           |cloth_config                  |8.2.88              |ENQUEUE_IM|Manifest: NOSIGNATURE
+		forge-1.19.2-43.1.47-universal.jar                |Forge                         |forge                         |43.1.47             |ENQUEUE_IM|Manifest: 84:ce:76:e8:45:35:e4:0e:63:86:df:47:59:80:0f:67:6c:c1:5f:6e:5f:4d:b3:54:47:1a:9f:7f:ed:5e:f2:90
+		createcafe-1.0.0-1.19.2.jar                       |Create Cafe                   |createcafe                    |1.0.0-1.19.2        |ENQUEUE_IM|Manifest: NOSIGNATURE
+		ironchest-1.19.2-14.2.7.jar                       |Iron Chests                   |ironchest                     |1.19.2-14.2.7       |ENQUEUE_IM|Manifest: NOSIGNATURE
+		client-1.19.2-20220805.130853-srg.jar             |Minecraft                     |minecraft                     |1.19.2              |ENQUEUE_IM|Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		morevillagers-forge-1.19-4.0.3.jar                |More Villagers                |morevillagers                 |4.0.3               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		TerraBlender-forge-1.19.2-2.0.1.128.jar           |TerraBlender                  |terrablender                  |2.0.1.128           |ENQUEUE_IM|Manifest: NOSIGNATURE
+		ImmersiveEngineering-1.19.2-9.0.0-153.jar         |Immersive Engineering         |immersiveengineering          |1.19.2-9.0.0-153    |ENQUEUE_IM|Manifest: 44:39:94:cf:1d:8c:be:3c:7f:a9:ee:f4:1e:63:a5:ac:61:f9:c2:87:d5:5b:d9:d6:8c:b5:3e:96:5d:8e:3f:b7
+		BiomesOPlenty-1.19.2-17.1.1.162.jar               |Biomes O' Plenty              |biomesoplenty                 |17.1.1.162          |ENQUEUE_IM|Manifest: NOSIGNATURE
+		ironfurnaces-1.19.2-3.6.3.jar                     |Iron Furnaces                 |ironfurnaces                  |3.6.3               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		spectrelib-forge-0.10.0+1.19.jar                  |SpectreLib                    |spectrelib                    |0.10.0+1.19         |ENQUEUE_IM|Manifest: NOSIGNATURE
+		curios-forge-1.19.2-5.1.1.0.jar                   |Curios API                    |curios                        |1.19.2-5.1.1.0      |ENQUEUE_IM|Manifest: NOSIGNATURE
+		Mekanism-1.19.2-10.3.5.473.jar                    |Mekanism                      |mekanism                      |10.3.5              |ENQUEUE_IM|Manifest: NOSIGNATURE
+		MekanismGenerators-1.19.2-10.3.5.473.jar          |Mekanism: Generators          |mekanismgenerators            |10.3.5              |ENQUEUE_IM|Manifest: NOSIGNATURE
+		flywheel-forge-1.19.2-0.6.7-8.jar                 |Flywheel                      |flywheel                      |0.6.7-8             |ENQUEUE_IM|Manifest: NOSIGNATURE
+		luckytntmod-1.19.2-43.1.47.0.jar                  |Lucky TNT Mod                 |luckytntmod                   |43.1.47.0           |ENQUEUE_IM|Manifest: NOSIGNATURE
+		luckytntlib-1.19.2-43.1.47.0.jar                  |Lucky TNT Lib                 |luckytntlib                   |43.1.47.0           |ENQUEUE_IM|Manifest: NOSIGNATURE
+		create-stuff-additions1.19.2_v2.0.1c.jar          |Create Stuff & Additions      |create_sa                     |2.0.1               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		[1.19.2] SecurityCraft v1.9.3.1.jar               |SecurityCraft                 |securitycraft                 |1.9.3.1             |ENQUEUE_IM|Manifest: NOSIGNATURE
+		backpacked-2.1.10-1.19.jar                        |Backpacked                    |backpacked                    |2.1.10              |ENQUEUE_IM|Manifest: NOSIGNATURE
+		cgm-1.2.8-1.19.jar                                |MrCrayfish's Gun Mod          |cgm                           |1.2.8               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		worldedit-mod-7.2.12.jar                          |WorldEdit                     |worldedit                     |7.2.12+6240-87f4ae1 |ENQUEUE_IM|Manifest: NOSIGNATURE
+		MekanismTools-1.19.2-10.3.5.473.jar               |Mekanism: Tools               |mekanismtools                 |10.3.5              |ENQUEUE_IM|Manifest: NOSIGNATURE
+		cfm-7.0.0-pre34-1.19.jar                          |MrCrayfish's Furniture Mod    |cfm                           |7.0.0-pre34         |ENQUEUE_IM|Manifest: NOSIGNATURE
+		architectury-6.3.49-forge.jar                     |Architectury                  |architectury                  |6.3.49              |ENQUEUE_IM|Manifest: NOSIGNATURE
+		createchunkloading-1.3.0-forge.jar                |Create Chunkloading           |createchunkloading            |1.3.0               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		extendedflywheels-1.2.2-1.19.2-0.5.f.jar          |Extended Flywheels            |extendedflywheels             |1.2.2-1.19.2-0.5.f  |ENQUEUE_IM|Manifest: NOSIGNATURE
+		create-1.19.2-0.5.0.f.jar                         |Create                        |create                        |0.5.0.f             |ENQUEUE_IM|Manifest: NOSIGNATURE
+		createdeco-1.2.11-1.19.2.jar                      |Create Deco                   |createdeco                    |1.2.11-1.19.2       |ENQUEUE_IM|Manifest: NOSIGNATURE
+		Oh_The_Biomes_You'll_Go-forge-1.19.2-2.0.0.13.jar |Oh The Biomes You'll Go       |byg                           |2.0.0.13            |ENQUEUE_IM|Manifest: NOSIGNATURE
+		BetterF3-4.0.0-Forge-1.19.2.jar                   |BetterF3                      |betterf3                      |4.0.0               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		framework-0.3.3-1.19.jar                          |Framework                     |framework                     |0.3.3               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		Applied-Mekanistics-1.3.3.jar                     |Applied Mekanistics           |appmek                        |1.3.3               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		mavm-1.1.0-mc1.19.jar                             |More Axolotl Variants Mod     |mavm                          |1.1.0               |ENQUEUE_IM|Manifest: NOSIGNATURE
+		Vanishmod-1.19.2-1.1.7.1.jar                      |Vanishmod                     |vmod                          |1.1.7.1             |ENQUEUE_IM|Manifest: NOSIGNATURE
+		createaddition-1.19.2-20221106a.jar               |Create Crafts & Additions     |createaddition                |1.19.2-20221106a    |ENQUEUE_IM|Manifest: NOSIGNATURE
+		BetterAdvancements-1.19.2-0.2.2.142.jar           |Better Advancements           |betteradvancements            |0.2.2.142           |ENQUEUE_IM|Manifest: NOSIGNATURE
+	Crash Report UUID: 540d5fbe-bf37-472c-8d4e-1f0a44ec639d
+	Flywheel Backend: GL33 Instanced Arrays
+	FML: 43.1
+	Forge: net.minecraftforge:43.1.47
